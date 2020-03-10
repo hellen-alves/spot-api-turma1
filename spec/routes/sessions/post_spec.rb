@@ -1,5 +1,5 @@
-describe "POST /sessions" do # funciona com ou sem ()
-  context "when send email", :smoke do # tag chamada smoke no rspec
+describe "POST /sessions", :smoke do # tag chamada smoke no rspec # funciona com ou sem ()
+  context "when send email" do
     before(:all) do
 
       # aqui temos uma instancia anonima
