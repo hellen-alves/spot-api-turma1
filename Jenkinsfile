@@ -15,13 +15,12 @@ pipeline {
           steps {
               echo 'Running api tests'
               sh 'AMBIENTE=hmg rspec'
-              post {
-                  always {
-                      junit 'logs/report.xml'
-                  }
-              }
-              
           }
+         post {
+             always {
+               junit 'logs/report.xml'
+                    }
+              }
       }
       stage('UAT') {
           steps {
