@@ -15,6 +15,7 @@ pipeline {
           steps {
               echo 'Running api tests'
               sh 'AMBIENTE=hmg rspec -t smoke'
+              junit 'logs/report.xml'
           }
       }
       stage('UAT') {
